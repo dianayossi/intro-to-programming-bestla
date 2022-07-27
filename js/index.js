@@ -5,7 +5,7 @@ const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
 
-copyright.innerHTML = `Diana Carachure ${'thisYear'}`;
+copyright.innerHTML = `Diana Carachure ${thisYear}`;
 
 footer.appendChild(copyright);
 
