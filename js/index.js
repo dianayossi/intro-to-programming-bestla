@@ -15,6 +15,6 @@ const skillsList = skillsSection.querySelector('ul'); //replace document with sk
 
 for (let i = 0; i < skills.length; i++){
     const skill = document.createElement('li');
-    skill.innerHTML = `${skills}`; //skills are not showing up
+    skill.innerHTML = `${skill}`; //skills are not showing up
     skillsList.appendChild(skill);
 };
