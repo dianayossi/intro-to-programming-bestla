@@ -9,12 +9,12 @@ copyright.innerHTML = `Diana Carachure ${thisYear}`;
 
 footer.appendChild(copyright);
 
-const skills = ['JavaScript', 'HTML', 'CSS'];
+const skills = ['JavaScript', 'HTML', 'CSS']; 
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul'); //replace document with skillsSection -only "looking" in that section
 
-for (let i = 0; i < skills; i++){
+for (let i = 0; i < skills.length; i++){
     const skill = document.createElement('li');
-    skill.innerHTML = `${skills}`;
+    skill.innerHTML = `${skills}`; //skills are not showing up
     skillsList.appendChild(skill);
 };
