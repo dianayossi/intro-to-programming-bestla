@@ -1,5 +1,5 @@
 const today = new Date();
-const thisYear = today.getFullYear();
+let thisYear = today.getFullYear();
 
 const footer = document.querySelector('footer');
 
@@ -14,46 +14,49 @@ const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul'); //replace document with skillsSection -only "looking" in that section
 
 for (let i = 0; i < skills.length; i++){
-    const skill = document.createElement('li');
+    let skill = document.createElement('li');
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 };
 
-
-//start of lesson-4-3
-
-let messageForm = document.getElementsByName('leave_message');
-
+//code below will handle the messages submitted in the form section of the page
+let messageForm = document.getElementsByName("leave_message");
 messageForm.addEventListener('submit', (e) => {
-        e.preventDefault(); //values should be logging in the console.
+    e.preventDefault();
 
-    });
+//retrieving the value from each event
+let name = e.target.name;
+let email = e.target.email;
+let message = e.target.message;
 
-        const name = e.target.name.value; //changed const to let since string will change
-        const email = e.target.email.value;
-        const message = e.target.message.value;
+console.log(name);
+console.log(email);
+console.log(message);
 
-        console.log('name');
-        console.log('email');
-        console.log('message');
+//is not logging values in console when it should be
 
-        const messageSection = document.getElementById('messages');
-        const messageList = messageSection.querySelector('ul'); 
-        const newMessage = document.createElement('li');
+//following section will display messages in a list
+//not displaying messages. unsure how to proceed
 
-         newMessage.innerHTML = `<a href = mailto: ${email}> ${name}</a> Wrote : <span> ${message} </span>`;
+let messageSection = document.getElementById("messages");
+let messageList = messageSection.querySelector("ul");
+let newMessage = document.createElement("li");
 
-        const removeButton = document.createElement('button');
-        removeButton.innerText = 'remove';
-        removeButton.type = 'button';
+newMessage.innerHTML = `<a href= "mailto: ${email}"> ${name} </a> wrote: <span> ${message} </span>`;
 
-        removeButton.addEventListener('click', () => {
-            const entry = removeButton.parentNode;
-            entry.remove();
-        });
+//creates a new buttom named remove
 
-        newMessage.appendChild('removeButton');
-        messageList.appendChild('newMessage');
+let removeButton = document.createElement("button");
+removeButton.innerText = "remove";
+removeButton.type = "button";
+removeButton.addEventListener('click', () => {
+    let entry = removeButton.parentNode;
+    entry.remove();
+});
 
-        e.target.reset();
-;
+newMessage.appendChild(removeButton);
+
+messageList.append(messageList);
+
+e.target.reset();
+});
