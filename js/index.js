@@ -36,6 +36,10 @@ console.log(message);
 //is not logging values in console when it should be
 
 //following section will display messages in a list
+<<<<<<< HEAD
+=======
+//not displaying messages. unsure how to proceed
+>>>>>>> main
 
 let messageSection = document.getElementById("messages");
 let messageList = messageSection.querySelector("ul");
