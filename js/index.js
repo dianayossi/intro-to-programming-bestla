@@ -20,46 +20,39 @@ for (let i = 0; i < skills.length; i++){
 };
 
 //code below will handle the messages submitted in the form section of the page
-let messageForm = document.getElementsByName("leave_message");
-messageForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    let messageForm = document.getElementsByName("leave_message")[0];
+    messageForm.addEventListener("submit", (event) => {
+        event.preventDefault();
 
 //retrieving the value from each event
-let name = e.target.name;
-let email = e.target.email;
-let message = e.target.message;
+    let name = event.target.name.value;
+    let email = event.target.email.value;
+    let message = event.target.message.value;
 
-console.log(name);
-console.log(email);
-console.log(message);
-
-//is not logging values in console when it should be
+    console.log(name);
+    console.log(email);
+    console.log(message);
 
 //following section will display messages in a list
-<<<<<<< HEAD
-=======
-//not displaying messages. unsure how to proceed
->>>>>>> main
+    let messageSection = document.getElementById("messages");
+    let messageList = messageSection.querySelector("ul");
+    let newMessage = document.createElement("li");
 
-let messageSection = document.getElementById("messages");
-let messageList = messageSection.querySelector("ul");
-let newMessage = document.createElement("li");
-
-newMessage.innerHTML = `<a href= "mailto: ${email}"> ${name} </a> wrote: <span> ${message} </span>`;
+    newMessage.innerHTML = `<a href= "mailto: ${email}"> ${name} </a> wrote: <span> ${message} </span>`;
 
 //creates a new buttom named remove
 
-let removeButton = document.createElement("button");
-removeButton.innerText = "remove";
-removeButton.type = "button";
-removeButton.addEventListener('click', () => {
-    let entry = removeButton.parentNode;
-    entry.remove();
-});
+    let removeButton = document.createElement("button");
+    removeButton.innerText = "remove";
+    removeButton.type = "button";
+    removeButton.addEventListener('click', () => {
+        let entry = removeButton.parentNode;
+        entry.remove();
+    });
 
-newMessage.appendChild(removeButton);
+    newMessage.appendChild(removeButton);
 
-messageList.append(messageList);
+    messageList.append(newMessage);
 
-e.target.reset();
+    event.target.reset();
 });
