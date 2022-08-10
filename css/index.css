@@ -1,0 +1,157 @@
+html{
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    color: #262626;
+    background-color: 242, 242, 242;
+    margin: 52px;
+    padding: 22px;
+    font-size: 15px;
+}
+
+/* header and navigation links */
+header{
+    font-size: 22px;
+    color: #ff751a;
+    overflow: hidden;
+}
+header li{
+    display: inline;
+    color: #ff751a;
+    align-items: right;
+}
+#menu ul{
+    text-align: center;
+    float: right;
+    margin: none;
+}
+
+/* headings */
+h2{
+    font-weight: bold;
+    font-size: 22px;
+    color: #ff7733;
+}
+h3{
+    font-size: 17px;
+    font-weight: bold;
+    color: #737373;
+}
+body{
+    font-size: 16px;
+}
+#experience li{
+    list-style-position: square;
+    list-style-type: circle;
+}
+#skills li{
+    list-style-position: square;
+    list-style-type: circle;
+}
+
+/* footer */
+footer {
+    border-style: none;
+    border-color: none;
+    background-color: rgb(230, 230, 230);
+    text-align: right;
+    width: 100%;
+    height: 2.5rem; 
+  }
+
+/* links */
+a{
+    color:#ff751a;
+}
+a:focus {
+    color: rgb(255,255,255);
+    background-color: #ffb380;
+}
+a:visited {
+    color: #f98b41;
+}
+a:hover {
+    color: rgba(161, 73, 39, 0.833);
+}
+
+/* message form */
+.text_form{
+  display: block;
+}
+.text_form {
+    padding: 0.4rem 0.5rem;
+    width: 20rem;
+}
+form{
+    background-color: rgba(230, 230, 230, 0.636);
+    border-style: solid;
+    border-color: rgb(190, 183, 183);
+    width: 50%;
+    padding: 12px 20px;
+    margin: 5px 0;
+
+    /* border-color: rgb(190, 183, 183);
+    width: 50%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    border-style: solid; */
+}
+form > input,
+form > textarea{
+    font-size: 13px;
+    border-style: line;
+}
+#message_label{
+    font-size: 18px;
+    color:#ff751a;
+}
+
+/* button */
+button {
+    background-color: #ffaa80;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: #ffaa80;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  /* list of messages */
+  #messages > ul{
+    background-color: rgba(237, 234, 234, 0.541);
+    border-radius: 4px;
+    border-style: none;
+    border-style: solid;
+    border-color: rgb(190, 183, 183);
+}
+#messages > ul>li>button{
+    background-color: #ffaa80;
+    padding: 10px;
+    color:white;
+    font-size: 12px;
+    border-radius: 4px;
+    margin:10px;
+}
+#messages{
+    /* border-color: rgb(190, 183, 183);
+    width: 50%;
+    padding: 12px 20px;
+    margin: 5px 0; */
+
+    /* background-color: rgba(230, 230, 230, 0.636); */
+    /* border-style: solid; */
+    border-color: rgb(190, 183, 183);
+    width: 52%;
+    padding: 12px 20px;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+      background-color: rgb(197, 196, 194);
+    }
+  }
