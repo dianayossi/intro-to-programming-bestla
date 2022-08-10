@@ -2,19 +2,26 @@
 <html>
     <head>
         <title>Diana's Site</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     </head>
     
     <body>
-        <div>
-        <nav>
-            <h1>Hi! Welcome!</h1>
-            <p>New to coding! Follow along my journey!</p>
-            <ul>
-                <li><a href="#about">About</About></a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#connect">Connect</a></li>
-            </ul>
-        </nav>
+        <header id="header">
+            <div id="menu">
+                <nav>
+                    <h1>Hi! Diana here!</h1>
+                    <!-- navigation menu -->
+                    <ul>
+                        <li><a href="#about">About</About></a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#connect">Connect</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
     <section id="about">
         <h2>About</h2>
@@ -22,15 +29,14 @@
          My background is in the nonprofit sector. I have worked in both direct client services and administration roles for the past 10 years. </p>
     </section>
 
-🇹
     <section id="experience">
         <h2>Experience </h2>
-        <p><strong>Advancement Specialist</strong></p>
+        <p><h3>Advancement Specialist</h3></p>
             <ul>
                 <li>Supports contract billing, submitting monthly invoices and maintaining accurate and detailed documentation of expenses.</li>
                 <li>Cooperate with management team to organize collected data to create summarized reports for grant requirements on a quarterly basis.</li> 
             </ul>
-        <p><strong>Data Integrity Advocate</strong></p>
+        <p><h3>Data Integrity Advocate</h3></p>
             <ul>
                 <li>Reviewed data quality through staff support and reviewed reports for accurate reporting on a monthly basis. </li> 
                 <li>Administered trainings and support staff in data entry system regarding the collection and documentation of participant information and services. </li> 
@@ -39,7 +45,7 @@
                 <li>Collaborated with the human trafficking task force to create goals that would raise community awareness of the organization’s human trafficking resources and aid.</li>
             </ul>
         
-        <p><strong>Lead Case Manager</strong></p>
+        <p><h3>Lead Case Manager</h3></p>
             <ul>
                 <li>Led a select team of domestic violence / human trafficking case managers.</li>
                 <li>Reviewed accurate documentation of participant files and data entry.</li>
@@ -62,19 +68,17 @@
         <p><strong>Github:</strong><a href="https://github.com/dianayossi">dianayoss</a></p>
     </section>
 
-        </div>
-
     <section>
         <h2>Leave a Message!</h2>
         <form name="leave_message">
-            <label>Name:</label><br>
-            <input type="text" name="name" required="true"><br>
+            <label id="message_label">Name:</label><br>
+            <input class="text_form" type="text" name="name" required="true"><br>
 
-            <label>Email:</label><br>
-            <input type="email" name="email" required="true"><br>
+            <label id="message_label">Email:</label><br>
+            <input class="text_form" type="email" name="email" required="true"><br>
 
-             <label>Message:</label><br>
-             <textarea name="message" required="true"></textarea><br>
+             <label id="message_label">Message:</label><br>
+             <textarea class="text_form" name="message" required="true"></textarea><br>
              <button type="submit"> Submit </button><br>
         </form>
      </section>
