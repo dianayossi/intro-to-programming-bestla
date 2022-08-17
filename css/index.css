@@ -1,33 +1,44 @@
 html{
     font-family: 'Playfair Display', serif;
 }
-
-body{
-    color: #262626;
-    background-color: 242, 242, 242;
-    margin: 52px;
-    padding: 22px;
-    font-size: 15px;
-}
-
 /* header and navigation links */
 header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    padding: 2px;
+    background-color:#f8f8ff;
     font-size: 22px;
     color: #ff751a;
+}
+.container {
+    display:flex;
+    justify-content:space-between;
+    align-items:center; 
+    margin: 0;
+}
+header ul{
+    list-style-type: none;
+    /* margin: 0; */
+    top: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
     overflow: hidden;
 }
-header li{
-    display: inline;
-    color: #ff751a;
-    align-items: right;
-}
-#menu ul{
-    text-align: center;
+header li {
     float: right;
-    margin: none;
 }
-
-/* headings */
+header li a {
+    display: block;
+    color: #ff751a;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
 h2{
     font-weight: bold;
     font-size: 22px;
@@ -38,28 +49,27 @@ h3{
     font-weight: bold;
     color: #737373;
 }
+/* body area */
 body{
-    font-size: 16px;
+    color: #262626;
+    margin: 52px;
+    padding: 22px;
+    font-size: 15px;
 }
 #experience li{
-    list-style-position: square;
-    list-style-type: circle;
+    /* list-style-position: square; */
+    /* list-style-type: circle; */
+    display: flex;
+    flex-direction: row;
 }
 #skills li{
-    list-style-position: square;
-    list-style-type: circle;
+    /* list-style-position: square;
+    list-style-type: circle; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
 }
-
-/* footer */
-footer {
-    border-style: none;
-    border-color: none;
-    background-color: rgb(230, 230, 230);
-    text-align: right;
-    width: 100%;
-    height: 2.5rem; 
-  }
-
 /* links */
 a{
     color:#ff751a;
@@ -72,8 +82,8 @@ a:visited {
     color: #f98b41;
 }
 a:hover {
-    color: rgba(161, 73, 39, 0.833);
-}
+    background-color: rgb(244, 244, 244);
+  }
 
 /* message form */
 .text_form{
@@ -106,7 +116,6 @@ form > textarea{
     font-size: 18px;
     color:#ff751a;
 }
-
 /* button */
 button {
     background-color: #ffaa80;
@@ -119,7 +128,6 @@ button {
     margin: 4px 2px;
     cursor: pointer;
   }
-
   /* list of messages */
   #messages > ul{
     background-color: rgba(237, 234, 234, 0.541);
@@ -148,8 +156,19 @@ button {
     width: 52%;
     padding: 12px 20px;
     margin: 5px 0;
+    display: none;
 }
-
+/* footer */
+footer {
+    border-style: none;
+    border-color: none;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    text-align: right;
+    width: 100%;
+    height: 2.5rem; 
+  }
 @media screen and (max-width: 700px) {
     body {
       background-color: rgb(197, 196, 194);
