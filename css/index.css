@@ -1,8 +1,8 @@
 html{
     font-family: 'Playfair Display', serif;
 }
-/* header and navigation links */
-header{
+/* ------------main header------------*/
+.main-header{
     position: fixed;
     width: 100%;
     top: 0;
@@ -20,25 +20,27 @@ header{
     align-items:center; 
     margin: 0;
 }
-header ul{
+/* ------------navigation links------------ */
+.main-header ul{
     list-style-type: none;
-    /* margin: 0; */
+    margin: 0;
     top: 0;
     right: 0;
     width: 100%;
     position: fixed;
     overflow: hidden;
 }
-header li {
+.main-header li {
     float: right;
 }
-header li a {
+.main-header li a {
     display: block;
     color: #ff751a;
     text-align: center;
     padding: 16px;
     text-decoration: none;
 }
+/* ------------other headers------------ */
 h2{
     font-weight: bold;
     font-size: 22px;
@@ -49,7 +51,7 @@ h3{
     font-weight: bold;
     color: #737373;
 }
-/* body area */
+/* ------------sections 1-5------------ */
 body{
     color: #262626;
     margin: 52px;
@@ -70,7 +72,11 @@ body{
     justify-content: space-between;
     padding: 1rem;
 }
-/* links */
+#projects li{
+    list-style-position: square;
+    list-style-type: circle; 
+}
+/* ------------all links------------ */
 a{
     color:#ff751a;
 }
@@ -85,7 +91,7 @@ a:hover {
     background-color: rgb(244, 244, 244);
   }
 
-/* message form */
+/* ------------message form ------------*/
 .text_form{
   display: block;
 }
@@ -116,7 +122,7 @@ form > textarea{
     font-size: 18px;
     color:#ff751a;
 }
-/* button */
+/* ------------button ------------*/
 button {
     background-color: #ffaa80;
     font-weight: bold;
@@ -128,7 +134,7 @@ button {
     margin: 4px 2px;
     cursor: pointer;
   }
-  /* list of messages */
+  /* ------------list of messages------------ */
   #messages > ul{
     background-color: rgba(237, 234, 234, 0.541);
     border-radius: 4px;
@@ -158,7 +164,7 @@ button {
     margin: 5px 0;
     display: none;
 }
-/* footer */
+/*------------footer------------*/
 footer {
     border-style: none;
     border-color: none;
@@ -169,6 +175,7 @@ footer {
     width: 100%;
     height: 2.5rem; 
   }
+  /* ------------media queries------------ */
 @media screen and (max-width: 700px) {
     body {
       background-color: rgb(197, 196, 194);
