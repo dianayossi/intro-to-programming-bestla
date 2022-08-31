@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Diana's Site</title>
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    </head>
-    
-    <body>
-        <header id="header">
-            <div class="container">
-                <nav>
-                    <h1 id="myname">Diana Carachure</h1>
-                    <!-- navigation menu -->
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#connect">Connect</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    <div class="allsections">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+    <title>Diana Carachure</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header"> <!--navigation menu -->
+        <div class="container">
+        <nav>
+            <h1 class="myname">Diana Carachure</h1>
+                <ul class="main-nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#connect">Connect</a></li>
+                </ul>
+        </nav>
+        <!-- </div> -->
+    </header>
+<div class="allsections">
+    <div class="first-sec">
     <section id="about">
         <h2>About</h2>
-        <p>Hi! My name's Diana. I am new to the tech world! My pronouns are <strong>she/her/ella</strong>My journey began a year ago by enrolling in classes at a community college. I took classes in Access and Python before enrolling in Code the Dream's Intro to Programming Class.
-         My background is in the nonprofit sector. I have worked in both direct client services and administration roles for the past 10 years. </p>
+        <p>Hi! My name's Diana. I am new to the tech world! My pronouns are <strong>she/her/ella</strong>My journey began a year ago by enrolling in classes at a community college.
+            I took classes in Access and Python before enrolling in Code the Dream's Intro to Programming Class.
+            My background is in the nonprofit sector. I have worked in both direct client services and administration roles for the past 10 years. </p>
     </section>
+    </div>  <!-- /first-sec div -->
 
+    <div class="second-sec">
     <section id="experience">
         <h2>Experience </h2>
         <p><h3>Advancement Specialist</h3></p>
@@ -46,7 +48,6 @@
                  collection.</li>
                 <li>Collaborated with the human trafficking task force to create goals that would raise community awareness of the organization’s human trafficking resources and aid.</li>
             </ul>
-        
         <p><h3>Lead Case Manager</h3></p>
             <ul>
                 <li>Led a select team of domestic violence / human trafficking case managers.</li>
@@ -55,21 +56,38 @@
                 <li>Educated participants in identifying the appropriate next steps by creating an individualized case plan. Provided participants with community referrals and crisis counseling.</li>  
                 <li>Conducted new participant intakes, ensuring collection of all required documentation for client files and Apricot database, and maintaining data accuracy</li>
             </ul>
-        </section>
+    </section>
+    </div>  <!--/second-sec div -->
 
+    <div class="third-sec">
     <section id="skills">
         <h2>Skills</h2>
         <ul> 
 
         </ul>
     </section>
+    </div> <!--/third-sec div -->
 
+    <div class="fourth-sec">
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+
+
+        </ul>
+    </section>
+    </div> <!--/fourth-sec div -->
+
+    <div class="fifth-sec"></div>
     <section id="connect">
         <h2>Connect</h2>
         <p><strong>Email:</strong></p>
         <p><strong>Github:</strong><a href="https://github.com/dianayossi">dianayoss</a></p>
     </section>
-    </div>
+    </div> <!--/fifth-sec div -->
+</div>
+
+    <div class="leavemessage-sec">
     <section>
         <h2>Leave a Message!</h2>
         <form name="leave_message">
@@ -83,16 +101,19 @@
              <textarea class="text_form" name="message" required="true"></textarea><br>
              <button type="submit"> Submit </button><br>
         </form>
-     </section>
+    </section>
+    </div> <!--/leavemessage-sec div -->
 
-     <section id="messages">
+    <div class="showmessages">
+    <section id="messages">
         <h2>Messages</h2>
         <ul>
 
         </ul>
-     </section>
+    </section>
+    </div><!--/showmessage-sec div -->
 
-        <footer></footer>
+        <footer class="footer-sec"></footer>
         <script src="js/index.js"></script>
-    </body>
+</body>    
 </html>

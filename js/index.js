@@ -5,7 +5,7 @@ const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
 
-copyright.innerHTML = `Diana Carachure ${thisYear}`;
+copyright.innerHTML = `&copy; Diana Carachure ${thisYear}`;
 
 footer.appendChild(copyright);
 
@@ -41,7 +41,6 @@ for (let i = 0; i < skills.length; i++){
     newMessage.innerHTML = `<a href= "mailto: ${email}"> ${name} </a> wrote: <span> ${message} </span>`;
 
 //creates a new buttom named remove
-
     let removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.type = "button";
@@ -55,4 +54,25 @@ for (let i = 0; i < skills.length; i++){
     messageList.append(newMessage);
 
     event.target.reset();
+});
+
+//handles the response from the server
+let githubRequest = new XMLHttpRequest();
+    githubRequest.open('GET','https://api.github.com/users/dianayossi/repos');
+    githubRequest.send();
+
+    githubRequest.addEventListener('load', () => {
+        let repositories = JSON.parse(githubRequest.response);
+        console.log(repositories);
+
+//display repos in list
+let projectSection = document.getElementById('projects');
+let projectList = projectSection.querySelector('ul');
+
+for (let i=0; i < repositories.length; i++){
+    let project = document.createElement('li');
+    project.innerHTML = repositories[i].name;
+    //project.innerHTML =    <a href =""> </a>`;
+    projectList.appendChild(project);
+    }
 });
