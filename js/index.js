@@ -1,6 +1,5 @@
 const today = new Date();
 let thisYear = today.getFullYear();
-const gitUrl = 'https://api.github.com/users/dianayossi/repos'
 const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
