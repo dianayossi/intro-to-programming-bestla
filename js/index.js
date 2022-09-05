@@ -1,6 +1,6 @@
 const today = new Date();
 let thisYear = today.getFullYear();
-
+const gitUrl = 'https://api.github.com/users/dianayossi/repos'
 const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
@@ -56,23 +56,20 @@ for (let i = 0; i < skills.length; i++){
     event.target.reset();
 });
 
-//handles the response from the server
-let githubRequest = new XMLHttpRequest();
-    githubRequest.open('GET','https://api.github.com/users/dianayossi/repos');
-    githubRequest.send();
-
-    githubRequest.addEventListener('load', () => {
-        let repositories = JSON.parse(githubRequest.response);
+// Fetch API
+fetch('https://api.github.com/users/dianayossi/repos')
+    .then(response => response.json())
+    .then((data) => {
+        let repositories = data; //storing data in repositories variable 
         console.log(repositories);
 
-//display repos in list
-let projectSection = document.getElementById('projects');
-let projectList = projectSection.querySelector('ul');
+        let projectSection = document.getElementById('projects');
 
-for (let i=0; i < repositories.length; i++){
-    let project = document.createElement('li');
-    project.innerHTML = repositories[i].name;
-    //project.innerHTML =    <a href =""> </a>`;
-    projectList.appendChild(project);
-    }
+        for (let i=0; i < repositories.length; i++){
+            let project = document.createElement('li');
+            project.innerHTML = repositories[i].name;
+
+            let projectList = projectSection.querySelector('ul');
+            projectList.appendChild(project);
+     }
 });
