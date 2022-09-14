@@ -10,38 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header"> <!--navigation menu -->
-        <div class="container">
-        <nav>
-            <h1 class="myname">Diana Carachure</h1>
+    <header> <!--navigation menu -->
+        <div class="wholeNav">
+            <nav class="navigation">
                 <ul class="main-nav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#connect">Connect</a></li>
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item"><a href="#about">About</a></li>
+                    <li class="item"><a href="#experience">Experience</a></li>
+                    <li class="item"><a href="#skills">Skills</a></li>
+                    <li class="item"><a href="#projects">Projects</a></li>
+                    <li class="item"><a href="#messageForm">Message</a></li>
                 </ul>
-        </nav>
-        <!-- </div> -->
-    </header>
+            </nav>
+        </div>
+    </header> <!--.main-header -->
+
 <div class="allsections">
-    <div class="first-sec">
     <section id="about">
         <h2>About</h2>
-        <p>Hi! My name's Diana. I am new to the tech world! My pronouns are <strong>she/her/ella</strong>My journey began a year ago by enrolling in classes at a community college.
-            I took classes in Access and Python before enrolling in Code the Dream's Intro to Programming Class.
+        <p>Hi! My name's Diana. I am new to the tech world!</p>
+        <p>My pronouns are <strong>she/her/ella</strong>. My journey began a year ago by enrolling in classes at a community college. I took classes in Access and Python before enrolling in Code the Dream's Intro to Programming Class.
             My background is in the nonprofit sector. I have worked in both direct client services and administration roles for the past 10 years. </p>
-    </section>
-    </div>  <!-- /first-sec div -->
+        </section>
 
-    <div class="second-sec">
     <section id="experience">
         <h2>Experience </h2>
         <p><h3>Advancement Specialist</h3></p>
-            <ul>
+            <ul class="resume">
                 <li>Supports contract billing, submitting monthly invoices and maintaining accurate and detailed documentation of expenses.</li>
                 <li>Cooperate with management team to organize collected data to create summarized reports for grant requirements on a quarterly basis.</li> 
             </ul>
         <p><h3>Data Integrity Advocate</h3></p>
-            <ul>
+            <ul class="resume">
                 <li>Reviewed data quality through staff support and reviewed reports for accurate reporting on a monthly basis. </li> 
                 <li>Administered trainings and support staff in data entry system regarding the collection and documentation of participant information and services. </li> 
                 <li>On a weekly basis run reports and export data in Apricot to Excel. Gather and prepare reports to show case action items and open issue status in data
@@ -49,7 +49,7 @@
                 <li>Collaborated with the human trafficking task force to create goals that would raise community awareness of the organization’s human trafficking resources and aid.</li>
             </ul>
         <p><h3>Lead Case Manager</h3></p>
-            <ul>
+            <ul class="resume">
                 <li>Led a select team of domestic violence / human trafficking case managers.</li>
                 <li>Reviewed accurate documentation of participant files and data entry.</li>
                 <li>Facilitated the Personal Empowerment Program in efforts of educating participants on domestic violence, its signs, and effects.</li>
@@ -57,18 +57,14 @@
                 <li>Conducted new participant intakes, ensuring collection of all required documentation for client files and Apricot database, and maintaining data accuracy</li>
             </ul>
     </section>
-    </div>  <!--/second-sec div -->
 
-    <div class="third-sec">
     <section id="skills">
         <h2>Skills</h2>
         <ul> 
 
         </ul>
     </section>
-    </div> <!--/third-sec div -->
 
-    <div class="fourth-sec">
     <section id="projects">
         <h2>Projects</h2>
         <ul>
@@ -76,21 +72,11 @@
 
         </ul>
     </section>
-    </div> <!--/fourth-sec div -->
 
-    <div class="fifth-sec"></div>
-    <section id="connect">
-        <h2>Connect</h2>
-        <p><strong>Email:</strong></p>
-        <p><strong>Github:</strong><a href="https://github.com/dianayossi">dianayoss</a></p>
-    </section>
-    </div> <!--/fifth-sec div -->
-</div>
-
-    <div class="leavemessage-sec">
-    <section>
+    <section id="messageForm">
         <h2>Leave a Message!</h2>
-        <form name="leave_message">
+        <p>Feel free to leave me a message! I'll try to get back to you ASAP :)</p>
+        <form class="formbox" name="leave_message">
             <label id="message_label">Name:</label><br>
             <input class="text_form" type="text" name="name" required="true"><br>
 
@@ -99,10 +85,9 @@
 
              <label id="message_label">Message:</label><br>
              <textarea class="text_form" name="message" required="true"></textarea><br>
-             <button type="submit"> Submit </button><br>
+             <button class="button" type="submit"> Submit </button><br>
         </form>
     </section>
-    </div> <!--/leavemessage-sec div -->
 
     <div class="showmessages">
     <section id="messages">
@@ -111,9 +96,16 @@
 
         </ul>
     </section>
-    </div><!--/showmessage-sec div -->
+    </div>
+</div>
 
-        <footer class="footer-sec"></footer>
+    <div class="footerDiv">
+    <section id="footer">
+        <footer>
+            <a href="https://github.com/dianayossi" target="_blank">Github</a>
+        </footer>
         <script src="js/index.js"></script>
+    </section>
+    </div>
 </body>    
 </html>
