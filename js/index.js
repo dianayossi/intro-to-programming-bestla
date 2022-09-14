@@ -9,7 +9,7 @@ copyright.innerHTML = `&copy; Diana Carachure ${thisYear}`;
 
 footer.appendChild(copyright);
 
-const skills = ['JavaScript', 'HTML', 'CSS', 'Access', 'Excel','Data Entry', 'Apricot by Social Solutions'];
+const skills = ['JavaScript', 'HTML', 'CSS', 'Access', 'Excel'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul'); //replace document with skillsSection -only "looking" in that section
 
@@ -60,14 +60,15 @@ for (let i = 0; i < skills.length; i++){
 fetch('https://api.github.com/users/dianayossi/repos')
     .then(response => response.json())
     .then((data) => {
-        let repositories = data; //storing data in repositories variable 
-        console.log(repositories);
-
+        //let repositories = data; //storing data in repositories variable 
+        console.log(data);
         let projectSection = document.getElementById('projects');
+        //let projectList = projectSection.querySelector('ul');
 
-        for (let i=0; i < repositories.length; i++){
+        for (let i=0; i < data.length; i++){
             let project = document.createElement('li');
-            project.innerHTML = repositories[i].name;
+            project.href = data[i].name;
+            project.innerHTML = `<a href="${data[i].html_url} "target="_blank">${data[i].name}</a>`;
 
             let projectList = projectSection.querySelector('ul');
             projectList.appendChild(project);
